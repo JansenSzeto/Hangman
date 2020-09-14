@@ -77,7 +77,6 @@ def show():
     global loss
     global tried
     os.system('cls')
-    print(answer)
     print(man[loss])
     print("".join(j))
     print(" ".join(tried))
