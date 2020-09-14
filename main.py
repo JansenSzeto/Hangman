@@ -3,6 +3,7 @@ import os
 import sys
 
 j = []
+tried = []
 got = 0
 loss = 0
 
@@ -74,6 +75,7 @@ def show():
     global j
     global got
     global loss
+    global tried
     os.system('cls')
     print(answer)
     print(len(answer))
@@ -87,7 +89,11 @@ def show():
                     j[x] = f"""{input_} """
                     got += 1
         else:
-            loss += 1
+            if input_ in tried:
+                pass
+            else:
+                loss += 1
+                tried.append(input_)
     if got == len(answer):
         win()
     if loss == 6:
