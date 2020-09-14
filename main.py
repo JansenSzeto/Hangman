@@ -78,9 +78,9 @@ def show():
     global tried
     os.system('cls')
     print(answer)
-    print(len(answer))
     print(man[loss])
     print("".join(j))
+    print(" ".join(tried))
     input_ = input()
     if len(input_) == 1 and input_.isalpha() == True:
         if input_ in list(answer):
