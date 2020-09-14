@@ -1,5 +1,6 @@
 import random
 import os
+import sys
 
 j = []
 got = 0
@@ -56,6 +57,19 @@ man = ['''
       |
 =========''']
 
+def win():
+    os.system('cls')
+    print("You won!")
+    input()
+    sys.exit(0)
+
+def loss_():
+    os.system('cls')
+    print("You loss!")
+    print(man[6])
+    input()
+    sys.exit(0)
+
 def show():
     global j
     global got
@@ -74,6 +88,10 @@ def show():
                     got += 1
         else:
             loss += 1
+    if got == len(answer):
+        win()
+    if loss == 6:
+        loss_()
     show()
     
 
